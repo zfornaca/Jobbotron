@@ -64,4 +64,14 @@ Update the company matching the provided <code>id</code>. <code>id</code> cannot
 Delete the company matching the provided <code>id</code>. Must be logged in as company being deleted.
 
 
-/jobs/{id}
+## /jobs
+
+#### POST
+{
+	"title": "___",
+	"salary": "___",
+	"equity": "___",
+	"company": "___"
+}
+
+#### GET
