@@ -67,11 +67,16 @@ Delete the company matching the provided <code>id</code>. Must be logged in as c
 ## /jobs
 
 #### POST
+Create a new job listing. Must be logged in as a company, not a user. <code>title</code>, <code>salary</code>, and <code>company</code> are required ,and <code>company</code> must match the posting company's <code>handle</code>. <code>equity</code> is optional. <code>salary</code> (and <code>equity</code> if provided) should be integers. Returns the new job in JSON with an <code>id</code> assigned.
+
+```json
 {
 	"title": "___",
-	"salary": "___",
-	"equity": "___",
+	"salary": ___,
+	"equity": ___,
 	"company": "___"
 }
+```
 
 #### GET
+Return a list of up to 50 jobs in JSON, or up to 50 jobs matching the search string, if a query is provided with a <code>search</code> parameter. Must be logged in.
