@@ -21,7 +21,7 @@ Create a new user. <code>username</code> and <code>email</code> must be unique, 
 ```
 
 #### GET
-Return a list of up to 50 users in JSON, or up to 50 users matching the search string, if a query is provided with a "search" string parameter. Must be logged in.
+Return a list of up to 50 users in JSON, or up to 50 users matching the search string, if a query is provided with a <code>search</code> parameter. Must be logged in.
 
 ## /users/{id}
 
@@ -29,7 +29,7 @@ Return a list of up to 50 users in JSON, or up to 50 users matching the search s
 Return the user matching the provided <code>id</code>.
 
 #### PATCH
-Update the user matching the provided <code>id</code>. <code>username</code> and <code>id</code> cannot be altered. Must be logged in as user being patched.
+Update the user matching the provided <code>id</code>. <code>id</code> cannot be updated. Must be logged in as user being patched.
 
 #### DELETE
 Delete the user matching the provided <code>id</code>. Must be logged in as user being deleted.
@@ -50,8 +50,18 @@ Create a new company account. <code>handle</code> and <code>email</code> must be
 ```
 
 #### GET
-Return a list of up to 50 companies in JSON, or up to 50 companies matching the search string, if a query is provided with a "search" string parameter. Must be logged in.
+Return a list of up to 50 companies in JSON, or up to 50 companies matching the search string, if a query is provided with a <code>search</code> parameter. Must be logged in.
 
+## /companies/{id}
+
+#### GET
+Return the company matching the provided <code>id</code>.
+
+#### PATCH
+Update the company matching the provided <code>id</code>. <code>id</code> cannot be updated. Must be logged in as company being patched.
+
+#### DELETE
+Delete the company matching the provided <code>id</code>. Must be logged in as company being deleted.
 
 
 /jobs/{id}
