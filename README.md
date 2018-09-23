@@ -111,4 +111,24 @@ Update the job application matching the provided <code>app_id</code>. Must be lo
 #### DELETE
 Delete the job application matching the provided <code>app_id</code>. Must be logged in as company that posted the job initially, or as the user that posted the particular application.
 
+## /user-auth
 
+#### POST
+Log in user with provided <code>username</code> and <code>password</code>, and return JSON web token (JWT).
+```json
+{
+      "username": "___",
+      "password": "___"
+  }
+```
+
+## /company-auth
+
+#### POST
+Log in company with provided <code>handle</code> and <code>password</code>, and return JSON web token (JWT).
+```json
+{
+      "handle": "___",
+      "password": "___"
+  }
+```
