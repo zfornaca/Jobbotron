@@ -80,3 +80,14 @@ Create a new job listing. Must be logged in as a company, not a user. <code>titl
 
 #### GET
 Return a list of up to 50 jobs in JSON, or up to 50 jobs matching the search string, if a query is provided with a <code>search</code> parameter. Must be logged in.
+
+## /jobs/{id}
+
+#### GET
+Return the job matching the provided <code>id</code>.
+
+#### PATCH
+Update the job matching the provided <code>id</code>. <code>id</code> cannot be updated. Must be logged in as company that posted the job initially.
+
+#### DELETE
+Delete the job matching the provided <code>id</code>. Must be logged in as company that posted the job initially.
