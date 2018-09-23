@@ -72,8 +72,8 @@ Create a new job listing. Must be logged in as a company, not a user. <code>titl
 ```json
 {
 	"title": "___",
-	"salary": ___,
-	"equity": ___,
+	"salary": "___",
+	"equity": "___",
 	"company": "___"
 }
 ```
@@ -91,3 +91,24 @@ Update the job matching the provided <code>id</code>. <code>id</code> cannot be 
 
 #### DELETE
 Delete the job matching the provided <code>id</code>. Must be logged in as company that posted the job initially.
+
+## /jobs/{id}/applications
+
+#### POST
+Create an application for a job matching the provided <code>id</id>. Must be logged in as a user.
+
+#### GET
+If logged in as a user, returns a list of any applications the user has created for that job. If logged in as the company that posted the job, returns a list of any applications created for that job, by any user.
+
+## /jobs/{id}/applications/{app_id}
+
+#### GET
+Return the job application matching the provided <code>app_id</code>.
+
+#### PATCH
+Update the job application matching the provided <code>app_id</code>. Must be logged in as company that posted the job initially, or as the user that posted the particular application.
+
+#### DELETE
+Delete the job application matching the provided <code>app_id</code>. Must be logged in as company that posted the job initially, or as the user that posted the particular application.
+
+
