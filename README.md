@@ -95,7 +95,7 @@ Delete the job matching the provided <code>id</code>. Must be logged in as compa
 ## /jobs/{id}/applications
 
 #### POST
-Create an application for a job matching the provided <code>id</id>. Must be logged in as a user.
+Create an application for a job matching the provided <code>id</code>. Must be logged in as a user.
 
 #### GET
 If logged in as a user, returns a list of any applications the user has created for that job. If logged in as the company that posted the job, returns a list of any applications created for that job, by any user.
