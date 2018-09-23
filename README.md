@@ -34,6 +34,24 @@ Update the user matching the provided <code>id</code>. <code>username</code> and
 #### DELETE
 Delete the user matching the provided <code>id</code>. Must be logged in as user being deleted.
 
-/companies/{handle}
+## /companies
+
+#### POST
+Create a new company account. <code>handle</code> and <code>email</code> must be unique, and are required. <code>name</code> and <code>password</code> are also required. <code>logo</code> is optional and should be a URL if provided. Returns the new company in JSON with an <code>id</code> assigned and with the password hashed.
+
+```json
+{
+	"name": "___",
+	"logo": "___",
+	"email": "___",
+	"handle": "___",
+	"password": "___"
+}
+```
+
+#### GET
+Return a list of up to 50 companies in JSON, or up to 50 companies matching the search string, if a query is provided with a "search" string parameter. Must be logged in.
+
+
 
 /jobs/{id}
